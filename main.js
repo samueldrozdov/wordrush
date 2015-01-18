@@ -1,8 +1,8 @@
 $(function() {
 
 	start()
-	$( "#input" ).keypress(function() {
-	  receivedInput()
+	$( "#input" ).keydown(function(e) {
+	  receivedInput(e)
 	})
 
 });
@@ -28,7 +28,8 @@ function start(){
 	}
 }
 
-function receivedInput()
+function receivedInput(e)
 {
-	$("#timer").html("nigah")
+	inputtedValue = String.fromCharCode(e.which)
+	$("#timer").html(""+inputtedValue+"")
 }
