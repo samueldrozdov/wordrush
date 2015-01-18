@@ -1,6 +1,10 @@
 $(function() {
 
 	start()
+	$( "#input" ).keypress(function() {
+	  receivedInput()
+	})
+
 });
 
 function start(){
@@ -22,4 +26,9 @@ function start(){
 	{
 		$("#timer").html("u ded")
 	}
+}
+
+function receivedInput()
+{
+	$("#timer").html("nigah")
 }
