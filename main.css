@@ -4,6 +4,9 @@ html {
   width: 100%;
   max-width: 100%;
   height: 100%;
+
+  font-family: "Avenir";
+
 }
 
 body {
@@ -67,11 +70,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+#brand {
+  font-size: 30px;
+  float: left;
+  color: white;
+  vertical-align: bottom;
+  padding-left: 40px;
+}
+#brand span {
+  font-size: 15px;
+  font-style: italic;
+}
+
 #score {
   font-size: 30px;
   float: right;
   color: white;
-  padding-top: 20px;
+  vertical-align: bottom;
   padding-right: 40px;
 }
 
@@ -85,12 +100,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .words-wrapper {
   @include vertical-align;
-  
+
 }
 
 .footer-wrapper {
   background-color: #607D8B;
   height: 8%;
   border-top: solid white 1px;
+}
 
+#previous-scores {
+  vertical-align: top;
+  font-size: 25px;
+  float: left;
+  color: white;
+  padding-left: 40px;
 }
