@@ -28,15 +28,23 @@
       <div id="score">0</div>
     </div>
 
-    <div class="main-content">
-      <div id="start-info"><input type ="button" id="start-button" value="Start Game"/></div>
-      <div id="myinput"></div>
-        Timer: <div id = "timer"></div>
-        <div class="words-wrapper">
-          <div id="myinput"></div>
-          <div id="words"><span>words</span></div>
-        </div>
+    <div class="main-content-wrapper">
+      <div id="ingame-wrapper">
+      <div id="time-wrapper">Timer: <div id = "timer">0</div></div>
+      <div id="wpm-wrapper">WPM: <div id = "wpm">0</div> </div>
+
       </div>
+      <div class="main-content">
+
+        <div id="start-info">
+          <input type ="button" id="start-button" value="Start Game"/></div>
+        <div id="myinput"></div>
+          <div class="words-wrapper">
+            <div id="myinput"></div>
+            <div id="words"><span>words</span></div>
+          </div>
+      </div>
+    </div>
 
     <div class="footer-wrapper">
       <div id="previous-scores">Previous Scores:</div>

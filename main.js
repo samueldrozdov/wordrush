@@ -75,14 +75,14 @@ function receivedInput(e)
 		    $("#score").text(score);
 		  }
 
-		  if($("#words").text().length < 30) {
+		  if($("#words").text().length < 20) {
 		    addWord();
 		  }
 	}
 }
 
 function initWords() {
-  var words = [chance.word(),chance.word(),chance.word(),chance.word(),chance.word(),chance.word()];
+  var words = [chance.word(),chance.word()];
 
   for(i = 0; i < words.length; i++) {
     $("#words").text($("#words").text() + " " + words[i]);
