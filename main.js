@@ -1,9 +1,14 @@
 $(function() {
 
-	start()
-	$( "#input" ).keydown(function(e) {
-	  receivedInput(e)
+	$(window).keydown(function(event){
+    	receivedInput(event)
+	});
+
+	$("#start-button").click(function(){
+		$("#start-info").attr("style", "display:none;");
+			start()
 	})
+
 
 });
 
@@ -24,12 +29,12 @@ function start(){
 	}
 	function timeOver()
 	{
-		$("#timer").html("u ded")
+		$("#start-info").attr("style", "");
 	}
 }
 
 function receivedInput(e)
 {
 	inputtedValue = String.fromCharCode(e.which)
-	$("#timer").html(""+inputtedValue+"")
+	$("#myinput").html(""+inputtedValue+"")
 }
