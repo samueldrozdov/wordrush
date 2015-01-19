@@ -1,9 +1,12 @@
 $(function() {
-	start()
-	$( "#input" ).keypress(function() {
-	  receivedInput()
-	})
+	$(window).keydown(function(event){
+    	receivedInput(event)
+	});
 
+	$("#start-button").click(function(){
+		$("#start-info").attr("style", "display:none;");
+			start()
+	});
 });
 
 function start(){
@@ -24,13 +27,14 @@ function start(){
 	}
 	function timeOver()
 	{
-		$("#timer").html("u ded")
+		$("#start-info").attr("style", "");
 	}
 }
 
-function receivedInput()
+function receivedInput(e)
 {
-	$("#timer").html("nigah")
+	inputtedValue = String.fromCharCode(e.which)
+	$("#myinput").html(""+inputtedValue+"")
 }
 
 function initWords()
