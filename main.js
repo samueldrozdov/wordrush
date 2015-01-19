@@ -13,10 +13,20 @@ $(function() {
 
 });
 
+  var score = 0;
+  var playing = false;
+  var previousScores = [];
+
+  const timeLimit = 2;
+
+
 function start(){
+	playing = true;
+	score = 0;
+	$("#score").text(score);
 	var myVar = setInterval(function(){myTimer()},1000);
 
-	const timeLimit = 60;
+
 	var timeLeft = timeLimit;
 
 	function myTimer() {
@@ -30,30 +40,35 @@ function start(){
 	}
 	function timeOver()
 	{
+		playing = false;
+		previousScores.push(score);
 		$("#start-info").attr("style", "");
 	}
 }
 
 function receivedInput(e)
 {
-	inputtedValue = String.fromCharCode(e.which).toLowerCase();
-	$("#myinput").html(""+inputtedValue+"")
+	if(playing)
+	{
+			inputtedValue = String.fromCharCode(e.which).toLowerCase();
+			$("#myinput").html(""+inputtedValue+"")
 
-  if(inputtedValue+"" == $("#words").text().charAt(0)) {
-    $("#words").text($("#words").text().substr(1));
-    var score = parseInt($("#score").text());
-    score += 100;
-    $("#score").text(score);
-  }
-  else {
-    var score = parseInt($("#score").text());
-    score -= 50;
-    $("#score").text(score);
-  }
+		  if(inputtedValue+"" == $("#words").text().charAt(0)) {
+		    $("#words").text($("#words").text().substr(1));
 
-  if($("#words").text().length < 30) {
-    addWord();
-  }
+		    score += 100;
+		    $("#score").text(score);
+		  }
+		  else {
+
+		    score -= 50;
+		    $("#score").text(score);
+		  }
+
+		  if($("#words").text().length < 30) {
+		    addWord();
+		  }
+	}
 }
 
 function initWords() {
