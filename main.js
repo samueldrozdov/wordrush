@@ -43,6 +43,7 @@ function start(){
 		playing = false;
 		previousScores.push(score);
 		$("#start-info").attr("style", "");
+		$("#previous-scores").html(""+previousScores+"")
 	}
 }
 
