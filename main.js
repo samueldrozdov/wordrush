@@ -1,5 +1,4 @@
 $(function() {
-
 	start()
 	$( "#input" ).keypress(function() {
 	  receivedInput()
@@ -8,6 +7,7 @@ $(function() {
 });
 
 function start(){
+  initWords();
 	var myVar = setInterval(function(){myTimer()},1000);
 
 	const timeLimit = 4;
@@ -31,4 +31,20 @@ function start(){
 function receivedInput()
 {
 	$("#timer").html("nigah")
+}
+
+function initWords()
+{
+  // Load Chance
+  var Chance = require('chance');
+  // Instantiate Chance so it can be used
+  var chance = new Chance();
+
+
+  var startWords = "";
+  for( i = 0; i < 10; i++) {
+    startWordsArray += (chance.string()+" ");
+  }
+  console.log(startWords);
+
 }
