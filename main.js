@@ -53,7 +53,7 @@ function receivedInput(e)
 }
 
 function initWords() {
-  var words = ["word","dude","man","banana","fruit","monkeys"];
+  var words = [chance.word(),chance.word(),chance.word(),chance.word(),chance.word(),chance.word()];
 
   for(i = 0; i < words.length; i++) {
     $("#words").text($("#words").text() + " " + words[i]);
@@ -61,6 +61,6 @@ function initWords() {
 }
 
 function addWord() {
-  $("#words").text($("#words").text() + " " + "random");
+  $("#words").text($("#words").text() + " " + chance.word());
 }
 
