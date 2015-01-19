@@ -32,9 +32,9 @@ textarea {
   width: 275px;
 }
 
-button {
-  background-color: white;
-  border: 0px;
+input {
+  background-color: none;
+  border-radius: 0px;
   padding: 0px;
   margin: 0px;
 }
@@ -63,11 +63,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-wrapper {
-  height: 8%;
+  height: 50px;
   background-color: #607D8B;
   border-bottom: solid white 1px;
   vertical-align: middle;
-
 }
 
 #brand {
@@ -75,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   color: white;
   vertical-align: bottom;
+  padding-top: 5px;
   padding-left: 40px;
 }
 #brand span {
@@ -87,25 +87,31 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
   color: white;
   vertical-align: bottom;
+  padding-top: 5px;
   padding-right: 40px;
 }
 
 .main-content {
   height: 84%;
   background-color: #607D8B;
-
   text-align: center;
   vertical-align: middle;
 }
 
-.words-wrapper {
-  @include vertical-align;
+.start-info #start-button {
+  border-radius: 0px;
+  background-color: none;
+}
 
+.words-wrapper {
+  text-align: left;
+  padding-left: 40%;
+  font-size: 50px;
 }
 
 .footer-wrapper {
+  height: 50px;
   background-color: #607D8B;
-  height: 8%;
   border-top: solid white 1px;
 }
 
@@ -114,5 +120,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 25px;
   float: left;
   color: white;
-  padding-left: 40px;
+  padding-top: 5px;
+  padding-left: 50px;
 }

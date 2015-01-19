@@ -17,7 +17,7 @@ $(function() {
   var playing = false;
   var previousScores = [];
 
-  const timeLimit = 2;
+  const timeLimit = 60;
 
 
 function start(){
