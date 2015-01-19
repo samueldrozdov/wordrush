@@ -7,13 +7,15 @@ $(function() {
 		$("#start-info").attr("style", "display:none;");
 			start()
 	});
+
+  initWords();
+
 });
 
 function start(){
-  initWords();
 	var myVar = setInterval(function(){myTimer()},1000);
 
-	const timeLimit = 4;
+	const timeLimit = 60;
 	var timeLeft = timeLimit;
 
 	function myTimer() {
@@ -33,22 +35,30 @@ function start(){
 
 function receivedInput(e)
 {
-	inputtedValue = String.fromCharCode(e.which)
+	inputtedValue = String.fromCharCode(e.which).toLowerCase();
 	$("#myinput").html(""+inputtedValue+"")
+
+  if(inputtedValue+"" == $("#words").text().charAt(0)) {
+    $("#words").text($("#words").text().substr(1));
+    var score = parseInt($("#score").text());
+    score += 100;
+    $("#score").text(score);
+  }
+  else {
+    var score = parseInt($("#score").text());
+    score -= 50;
+    $("#score").text(score);
+  }
 }
 
-function initWords()
-{
-  // Load Chance
-  var Chance = require('chance');
-  // Instantiate Chance so it can be used
-  var chance = new Chance();
+function initWords() {
+  var words = ["word","dude","man","banana","fruit","monkeys"];
 
-
-  var startWords = "";
-  for( i = 0; i < 10; i++) {
-    startWordsArray += (chance.string()+" ");
+  for(i = 0; i < words.length; i++) {
+    $("#words").text($("#words").text() + " " + words[i]);
   }
-  console.log(startWords);
+}
 
+function addWord() {
+  $("#words").text($("#words").text() + " " + "random");
 }
