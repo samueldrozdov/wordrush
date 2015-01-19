@@ -57,6 +57,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: solid white 1px;
 }
 
+#score {
+  float: right;
+}
+
 .main-content {
   height: 84%;
   background-color: #607D8B;
