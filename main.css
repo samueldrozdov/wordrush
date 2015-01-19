@@ -1,0 +1,146 @@
+/* universal */
+
+html {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+
+  font-family: "Avenir";
+
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  margin: 0px;
+}
+
+section {
+
+}
+
+textarea {
+  color: black;
+  resize: vertical;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  color: #EF6C00;
+  outline: none;
+  height: 25px;
+  width: 275px;
+}
+
+input {
+  background-color: none;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin: 0px;
+  letter-spacing: 0.3px;
+}
+
+#start-button {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 10px;
+  font-family: "Avenir";
+  font-size: 20px;
+}
+
+/* */
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.header-wrapper {
+  height: 50px;
+  background-color: #607D8B;
+  border-bottom: solid white 1px;
+  vertical-align: middle;
+}
+
+#brand {
+  font-size: 30px;
+  float: left;
+  color: white;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-left: 40px;
+}
+#brand span {
+  font-size: 15px;
+  font-style: italic;
+}
+
+#score {
+  font-size: 30px;
+  float: right;
+  color: white;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-right: 40px;
+}
+
+.main-content-wrapper {
+  height: 86%;
+  width: 100%;
+  background-color: #607D8B;
+}
+
+.main-content {
+  top: 25%;
+  position: relative;
+  text-align: center;
+}
+
+.start-info #start-button {
+  border-radius: 0px;
+  background-color: none;
+}
+
+#ingame-wrapper {
+  color: white;
+  float: left;
+  margin-top: 80px;
+  margin-left: 100px;
+  font-size: 30px;
+  position:absolute;
+}
+
+.words-wrapper {
+  text-align: left;
+  padding-left: 40%;
+  font-size: 50px;
+}
+
+#words {
+  border-left: white solid 2px;
+}
+
+.footer-wrapper {
+  height: 50px;
+  background-color: #607D8B;
+  border-top: solid white 1px;
+}
+
+#previous-scores {
+  vertical-align: top;
+  font-size: 25px;
+  float: left;
+  color: white;
+  padding-top: 5px;
+  padding-left: 50px;
+}

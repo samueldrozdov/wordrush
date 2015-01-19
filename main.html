@@ -1,1 +1,55 @@
-MY Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Typing Game">
+  <meta name="author" content="Drozdov-and-Bando">
+
+  <title>Word Rush</title>
+
+
+  <!-- Styling -->
+  <link type="text/css" href="main.css" rel="stylesheet">
+
+  <!-- Javascript -->
+  <script src="jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script src="node_modules/chance/chance.js"></script>
+
+</head>
+
+<body>
+
+  <div class="content-wrapper">
+    <div class="header-wrapper">
+      <div id="brand">Word Rush <span>made by Masa Bando and Sam Drozdov</span></div>
+      <div id="score">0</div>
+    </div>
+
+    <div class="main-content-wrapper">
+      <div id="ingame-wrapper">
+      <div id="time-wrapper">Timer: <div id = "timer">0</div></div>
+      <div id="wpm-wrapper">WPM: <div id = "wpm">0</div> </div>
+
+      </div>
+      <div class="main-content">
+
+        <div id="start-info">
+          <input type ="button" id="start-button" value="Start Game"/></div>
+        <div id="myinput"></div>
+          <div class="words-wrapper">
+            <div id="myinput"></div>
+            <div id="words"><span>words</span></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div id="previous-scores">Previous Scores:</div>
+    </div>
+  </div>
+</body>
+
+</html>

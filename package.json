@@ -1,0 +1,22 @@
+{
+  "name": "WordRush",
+  "version": "1.0.0",
+  "description": "A typing game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdrozzy/wordrush.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Drozdov and Bando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdrozzy/wordrush/issues"
+  },
+  "homepage": "https://github.com/sdrozzy/wordrush"
+}
