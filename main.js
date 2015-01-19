@@ -50,6 +50,10 @@ function receivedInput(e)
     score -= 50;
     $("#score").text(score);
   }
+
+  if($("#words").text().length < 30) {
+    addWord();
+  }
 }
 
 function initWords() {
@@ -63,4 +67,3 @@ function initWords() {
 function addWord() {
   $("#words").text($("#words").text() + " " + chance.word());
 }
-

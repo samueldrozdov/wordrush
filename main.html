@@ -17,9 +17,6 @@
   <script src="jquery-1.11.0.js"></script>
   <script type="text/javascript" src="main.js"></script>
   <script src="node_modules/chance/chance.js"></script>
-<script>
-    console.log(chance.word());
-</script>
 
 </head>
 
@@ -31,11 +28,14 @@
     </div>
 
     <div class="main-content">
-    <p><div id = "start-info"><input type ="button" id="start-button" value="Start Game"/></div></p>
-    <div id = "myinput"></div>
-      <p>Timer: <div id = "timer"></div></p>
-      <p id="words">words</p>
-    </div>
+      <div id="start-info"><input type ="button" id="start-button" value="Start Game"/></div>
+      <div id="myinput"></div>
+        Timer: <div id = "timer"></div>
+        <div class="words-wrapper">
+          <div id="myinput"></div>
+          <div id="words">words</div>
+        </div>
+      </div>
 
     <div class="footer-wrapper">
     </div>
