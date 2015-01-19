@@ -16,14 +16,18 @@ $(function() {
   var score = 0;
   var playing = false;
   var previousScores = [];
+  var wpm = 0;
 
   const timeLimit = 2;
+
+
 
 
 function start(){
 	playing = true;
 	score = 0;
 	$("#score").text(score);
+	$("#wpm").text("0");
 	var myVar = setInterval(function(){myTimer()},1000);
 
 
@@ -55,6 +59,11 @@ function receivedInput(e)
 			$("#myinput").html(""+inputtedValue+"")
 
 		  if(inputtedValue+"" == $("#words").text().charAt(0)) {
+		  	if(inputtedValue+"" == " ")
+		  	{
+		  		wpm += 1;
+		  		$("#wpm").text(wpm);
+		  	}
 		    $("#words").text($("#words").text().substr(1));
 
 		    score += 100;
